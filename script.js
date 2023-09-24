@@ -1,3 +1,9 @@
+// Declare trevorCooke app
+const trevorCooke = {};
+
+// Select footerP for footer function
+trevorCooke.footerP = document.querySelector('.footerP');
+
 // Footer Year function
 trevorCooke.footerYear = () => {
     let currentYear = new Date().getFullYear();
