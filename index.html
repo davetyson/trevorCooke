@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Trevor Cooke</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <header>
-        <div class="headerHero">
+        <div class="headerHero wrapper">
             <h1>Trevor Cooke</h1>
             <div class="headerFlex">
                 <figure><img src="assets/trevorCookeLive1.JPG" alt="Trevor Cooke: Music producer, Mixer, and Engineer"></figure>
@@ -17,47 +18,91 @@
             <div class="headerSubtitles">    
                 <h2>Producer, Mixer, Engineer</h2>     
                 <div>
-                    <p>Instagram icon</p>
-                    <p>Spotify icon</p>
-                    <p>Apple Music icon?</p>
-                    <p>YouTube icon</p>
+                    <a href="#" target="_blank">
+                        <i class="fa fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram - this link will open in a new tab</span>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fa fa-spotify" aria-hidden="true"></i><span class="sr-only">Spotify - this link will open in a new tab</span>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fa fa-apple" aria-hidden="true"></i><span class="sr-only">Apple Music - this link will open in a new tab</span>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fa fa-youtube" aria-hidden="true"></i><span class="sr-only">YouTube - this link will open in a new tab</span>
+                    </a>
                 </div>       
             </div>
         </div>
     </header>
     <main>
-        <section class="selectedWorks">
+        <section class="selectedWorks wrapper">
             <h3>Selected Works</h3>
             <p class="worksLegend"><strong>P</strong> Producer | <strong>M</strong> Mixer | <strong>E</strong> Engineer</p>
             <div class="worksTable">
                 <p>Selected works will go here (audio & video)</p>
             </div>
         </section>
-        <section class="onLocation">
-            <h3>On Location</h3>
-            <div class="worksSliderMain">
+        <section class="testimonials wrapper">
+            <figure><img src="assets/trevorCookeStudio1.jpg" alt="Trevor Cooke in the mixing room at Threshold Recording Studio"></figure>
+            <figcaption><a href="#">Photo by some person</a></figcaption>
+            <h3>Testimonials</h3>
+            <div class="testimonialsSliderMain">
                 <button class="arrow"><</button>
-                <div class="worksSliderWindow">
-                    <div class="worksSliderBlock1">
-                        <h4>Casbah</h4>
-                        <figure><img src="#" alt="The Casbah in Hamilton, ON"></figure>
+                <div class="testimonialsSliderWindow">
+                    <div class="testimonialsSliderBlock1">
+                        <h4>Tina Turner</h4>
+                        <p class="testimonialP">"Simply the best"</p>
                     </div>
-                    <div class="worksSliderBlock2">
-                        <h4>Threshold Recording Studio</h4>
-                        <figure><img src="#" alt="Thereshold Recording Studio in Hamilton, ON"></figure>
+                    <div class="testimonialsSliderBlock2">
+                        <h4>Cindy Lauper</h4>
+                        <p class="testimonialP">"Girls just wanna have fun... with Trevor in the studio!"</p>
                     </div>
-                    <div class="worksSliderBlock3">
-                        <h4>The Mule Spinner</h4>
-                        <figure><img src="#" alt="The Mule Spinner in Hamilton, ON"></figure>
+                    <div class="testimonialsSliderBlock3">
+                        <h4>Larry David</h4>
+                        <p class="testimonialP">"Pretty, pretty good"</p>
                     </div>
                 </div>
                 <button class="arrow">></button>
             </div>
         </section>
+        <section class="about wrapper">
+            <div class="aboutText">
+                <h3>About Trevor</h3>
+                <p><span>I'm Trevor Cooke,</span> and I’m an audio engineer located in Hamilton Ontario. Music has always been a huge part of my life, I’ve been playing in bands since I was 14. Writing, recording and gigging have been a constant since. Over the pandemic I became enamoured by recording, creating home projects and mixing them on a laptop. Over the past few years I’ve honed my craft and started working in venues and professional recording studios, turning my hobby into a living. Today I mainly work out of Threshold studios in hamilton ontario, but am willing to travel and offer rates that will satisfy most budgets. From creating radio ready pop records, to the more indie, DIY-punk, and hardcore projects of my youth, I’m game to make records whenever and wherever I am needed.</p>
+            </div>
+            <div class="aboutImg">
+                <figure><img src="assets/trevorCookeStudio2.jpg" alt="Trevor Cooke perfectly setting up a microphone on a Fender guitar amp"></figure>
+                <figcaption><a href="#">Photo by some person</a></figcaption>
+            </div>
+        </section>
+        <section class="contact wrapper">
+            <h3>Contact</h3>
+            <form method="post" name="emailContactForm" action="#">
+                <fieldset>
+                    <div class="nameEmail flexbox">
+                        <label class="sr-only" for="name"><strong>Name</strong> (Required)</label>
+                        <input id="name" type="name" name="name" placeholder="Name">
+                        <label class="sr-only" for="email"><strong>Email</strong> (Required)</label>
+                        <input id="email" type="email" name="email" placeholder="Email">
+                    </div>
+                    <label class="sr-only" for="message"><strong>Message</strong> (Required)</label>
+                    <p>Please include the following:</p>
+                    <ul>
+                        <li>Artist/Band Name</li>
+                        <li>Details of Project (Recording? Mixing?)</li>
+                        <li>General Timeline and Budget</li>
+                        <li>Links to previous recordings or demos</li>
+                    </ul>
+                    <textarea id="message" type="message" name="message" placeholder="Message" autocomplete="off"></textarea>
+                </fieldset>
+                <button type="submit" value="Send Form">Send</button>
+            </form>
+        </section>
     </main>
     <footer>
-
+        <p class="wrapper footerP">© Trevor Cooke</p>
+        <p class="wrapper builtBy">Website built by <a href="https://davetyson.tech">Dave Tyson</a></p>
     </footer>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
