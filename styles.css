@@ -13,3 +13,442 @@ font-family: 'Days One', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Russo One', sans-serif; 
 */
+
+/* Global styles */
+
+body {
+    background-color: #000;
+    color: #FFF;
+    font-size: 125%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* main {
+    background-color: #FFE4AD
+} */
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    color: #FFF;
+}
+
+h1,
+h2 {
+    font-size: 3rem;
+    line-height: 2.8rem;
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+}
+
+h2 {
+    border-bottom: 3px solid #FFF;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+h2,
+h3 {
+    text-align: center;
+    font-family: 'Days One', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: #FFF;
+    /* text-decoration: none; */
+    transition: 0.1s;
+}
+
+a:hover,
+a:focus,
+.menuOpen:hover,
+.menuOpen:focus {
+    color: #FFF;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+figure {
+    margin: 0 auto;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #introduction,
+#classes,
+#testimonials,
+#contact {
+    padding: 10px 0;
+} */
+
+.flexbox {
+    display: flex;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.fa {
+    font-size: 2rem;
+    margin: 5px 20px 5px 0;
+}
+
+/* Header styles */
+header {
+    /* background-color: #212121; */
+    padding-top: 5dvh;
+}
+
+/* header figure {
+    margin-bottom: 30px;
+    width: 100%;
+} */
+
+/* Introduction styles */
+/* #introduction {
+    padding-top: 20px;
+}
+
+#introduction h3 {
+    padding-right: 20px;
+}
+
+.introductionFlex {
+    flex-direction: row;
+}
+
+.introductionText {
+    flex-direction: column;
+    width: 65%;
+}
+
+.introductionFig {
+    width: 35%;
+}
+
+.introductionFig img {
+    height: 450px;
+} */
+
+/* Classes styles */
+/* #classes ul {
+    margin: 30px auto;
+    flex-wrap: wrap;
+}
+
+#classes figure {
+    border: 5px solid #212121;
+}
+
+#classes h3 {
+    padding: 0;
+    margin: 10px auto 20px auto;
+    text-align: center;
+}
+
+#classes p {
+    padding: 0;
+    margin: 5px;
+}
+
+figcaption {
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-block;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.classDetails {
+    margin: 0 auto;
+}
+
+.studioImg,
+.classesImg {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.studioImg {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.studioImg figcaption {
+    width: 70%;
+}
+
+.classesImg {
+    padding-top: 20px;
+    width: calc(50% - 20px);
+    flex-direction: column;
+} */
+
+/* Testimonial styles */
+/* #testimonials figure {
+    width: 35%;
+    height: 100%;
+    padding: 20px;
+}
+
+#testimonials p {
+    font-size: 1.5rem;
+    padding-left: 50px;
+}
+
+h3 {
+    text-align: right;
+    padding-right: 100px;
+}
+
+.testimonialsFlex {
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.testimonialsText {
+    flex-direction: column;
+    width: 65%;
+    justify-content: center;
+} */
+
+/* Contact styles */
+form {
+    padding-top: 20px;
+}
+
+fieldset {
+    border: none;
+    width: 80%;
+    margin: 0 auto;
+}
+
+input {
+    width: 50%;
+}
+
+textarea {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 200px;
+}
+
+button {
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: none;
+    padding: 10px;
+    margin: 10px auto;
+    transition: 0.1s;
+}
+
+button:hover,
+button:focus {
+    background-color: #FFF;
+    color: #000;
+    cursor: pointer;
+}
+
+#name {
+    margin-right: 10px;
+}
+
+#email {
+    margin-left: 10px;
+}
+
+.contactInstructions,
+.contactBoxTitle {
+    display: block;
+    width: 80%;
+    text-align: center;
+}
+
+.contactInstructions {
+    margin: 20px auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.contactBoxTitle {
+    margin: 10px auto;
+}
+
+.contactBlock {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.contactBlock p {
+    margin: auto auto auto 0;
+    text-align: center;
+    height: fit-content;
+}
+
+.contactIconBox {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.nameEmail {
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+}
+
+/* Footer styles */
+footer {
+    /* background-color: #000;
+    color: #FFF; */
+    padding: 20px;
+    text-align: center;
+}
+
+.builtBy {
+    padding-top: 10px;
+}
+
+.builtBy,
+.builtBy a {
+    font-size: 1rem;
+}
+
+/* .builtBy a {
+    color: #FFF;
+} */
+
+/* .builtBy a:hover,
+.builtBy a:focus {
+    color: #FF4031;
+} */
+
+/* Media Queries */
+/* @media (max-width: 768px) {
+    body {
+        font-size: 100%;
+    }
+    h1,
+    h2 {
+        font-size: 2rem;
+    }
+    h2 {
+        width: 100%;
+    }
+    h3 {
+        padding: 0;
+        font-size: 125%;
+    }
+    header figure {
+        width: 90%;
+    }
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menuOpen {
+        display: inline-block;
+    }
+    .showMenu {
+        display: inline-block;
+    }
+    .hideMenu {
+        display: none;
+    }
+    #introduction h3 {
+        padding-right: 0;
+    }
+    .introductionFlex {
+        flex-direction: column-reverse;
+    }
+    .introductionText {
+        text-align: center;
+        width: 100%;
+    }
+    .introductionFig {
+        width: auto;
+        margin-top: 20px;
+    }
+    .introductionFig img {
+        height: 300px;
+    }
+    .classesImg {
+        width: calc(100% - 20px);
+    }
+    .studioImg figcaption,
+    .classesImg figcaption {
+        width: 100%;
+    }
+    .classesImg figcaption {
+        margin-bottom: 10px;
+    }
+    .testimonialsFlex {
+        flex-direction: column;
+    }
+    #testimonials figure {
+        height: 50%;
+        width: 50%;
+    }
+    #testimonials p {
+        padding: 0;
+    }
+    .testimonialsText {
+        width: 100%;
+    }
+    .contactInstructions,
+    .contactBoxTitle {
+        width: 100%;
+    }
+    fieldset {
+        width: 100%;
+    }
+    input {
+        width: 100%;
+    }
+    #name,
+    #email {
+        padding: 0;
+        margin: 5px auto;
+    }
+    .nameEmail {
+        flex-wrap: wrap;
+    }
+    .contactBlock {
+        width: 100%;
+    }
+    .contactIconBox {
+        width: 350px;
+    }
+    .contactIconBox p,
+    .contactBoxTitle,
+    footer p,
+    footer a {
+        font-size: 112.5%
+    }
+} */
+
