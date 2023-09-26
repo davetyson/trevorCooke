@@ -1,11 +1,15 @@
 <!-- 
     To do still:
     - All CSS - In progress
+        - next up... divs
+        - arrange testimonials slider
+        - arrange about me section
+        - arrange contact form
     - Adjust HTML as needed while working on CSS - In progress
     - Test existing JS - Done
     - Work out slider JS
     - Get real Testimonial content
-    - Get social links Trevor wants
+    - Get social links Trevor wants - IG added
     - Get selected works Trevor wants
     - Deploy site & test site
     - Set up Formspree
@@ -25,8 +29,8 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header>
-        <div class="headerHero wrapper">
+    <header class="wrapper">
+        <div class="headerHero">
             <h1>Trevor Cooke</h1>
             <div class="headerFlex">
                 <figure><img src="assets/trevorCookeLive1.JPG" alt="Trevor Cooke: Music producer, Mixer, and Engineer"></figure>
@@ -35,7 +39,7 @@
             <div class="headerSubtitles">    
                 <h2>Producer, Mixer, Engineer</h2>     
                 <div>
-                    <a href="#" target="_blank">
+                    <a href="https://www.instagram.com/trevorcooke_" target="_blank">
                         <i class="fa fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram - this link will open in a new tab</span>
                     </a>
                     <a href="#" target="_blank">
@@ -59,11 +63,11 @@
                 <p>Selected works will go here (audio & video)</p>
             </div>
         </section>
-        <section class="testimonials wrapper">
+        <section class="testimonials">
             <figure><img src="assets/trevorCookeStudio1.jpg" alt="Trevor Cooke in the mixing room at Threshold Recording Studio"></figure>
             <figcaption><a href="#">Photo by some person</a></figcaption>
-            <h3>Testimonials</h3>
-            <div class="testimonialsSliderMain">
+            <h3 class="wrapper">Testimonials</h3>
+            <div class="testimonialsSliderMain wrapper">
                 <button class="arrow"><</button>
                 <div class="testimonialsSliderWindow">
                     <div class="testimonialsSliderBlock1">
