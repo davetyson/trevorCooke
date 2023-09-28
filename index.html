@@ -61,32 +61,32 @@
         <section class="selectedWorks wrapper">
             <h3>Selected Works</h3>
             <p class="worksLegend"><strong>P</strong> Producer | <strong>M</strong> Mixer | <strong>E</strong> Engineer</p>
-            <div class="worksTable">
-                <div class="spotiBlock">
+            <ul class="worksTable">
+                <li class="spotiBlock">
                     <iframe class="spotiFrame" src="https://open.spotify.com/embed/track/4OeFQtRyT7vsLnRTv7t8YT?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     <p>P</p>
-                </div>
-                <div class="spotiBlock">
+                </li>
+                <li class="spotiBlock">
                     <iframe class="spotiFrame" src="https://open.spotify.com/embed/track/4y1LsJpmMti1PfRQV9AWWe?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     <p>PM</p>
-                </div>
-                <div class="spotiBlock">
+                </li>
+                <li class="spotiBlock">
                     <iframe class="spotiFrame" src="https://open.spotify.com/embed/track/3VpvErs3oc29iuZLqM1GN9?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     <p>PME</p>
-                </div>
-                <div class="spotiBlock">
+                </li>
+                <li class="spotiBlock">
                     <iframe class="spotiFrame" src="https://open.spotify.com/embed/track/3cfOd4CMv2snFaKAnMdnvK?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     <p>P</p>
-                </div>
-                <div class="spotiBlock">
+                </li>
+                <li class="spotiBlock">
                     <iframe class="spotiFrame" src="https://open.spotify.com/embed/track/51c94ac31swyDQj9B3Lzs3?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     <p>PM</p>
-                </div>
-                <div class="spotiBlock">
+                </li>
+                <li class="spotiBlock">
                     <iframe class="spotiFrame" src="https://open.spotify.com/embed/track/50iBJRkGjjht3RiwD0VqLA?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     <p>PME</p>
-                </div>
-            </div>
+                </li>
+            </ul>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/7QBJaTtF7XI?si=R0cvVcfLpHBhBB3q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>     
             <p class="youTubeP">PME</p>   
         </section>
@@ -127,6 +127,13 @@
             <h3>Contact</h3>
             <form method="post" name="emailContactForm" action="#">
                 <fieldset>
+                    <p>Please include the following in your message:</p>
+                    <ul>
+                        <li>Artist/Band Name</li>
+                        <li>Details of Project (Recording? Mixing?)</li>
+                        <li>General Timeline and Budget</li>
+                        <li>Links to previous recordings or demos</li>
+                    </ul>
                     <div class="nameEmail flexbox">
                         <label class="sr-only" for="name"><strong>Name</strong> (Required)</label>
                         <input id="name" type="name" name="name" placeholder="Name">
@@ -134,13 +141,6 @@
                         <input id="email" type="email" name="email" placeholder="Email">
                     </div>
                     <label class="sr-only" for="message"><strong>Message</strong> (Required)</label>
-                    <p>Please include the following:</p>
-                    <ul>
-                        <li>Artist/Band Name</li>
-                        <li>Details of Project (Recording? Mixing?)</li>
-                        <li>General Timeline and Budget</li>
-                        <li>Links to previous recordings or demos</li>
-                    </ul>
                     <textarea id="message" type="message" name="message" placeholder="Message" autocomplete="off"></textarea>
                 </fieldset>
                 <button type="submit" value="Send Form">Send</button>

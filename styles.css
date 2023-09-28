@@ -6,14 +6,6 @@ html { box-sizing: border-box;}
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-/* 
-Google fonts
-
-font-family: 'Days One', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Russo One', sans-serif; 
-*/
-
 /* Global styles */
 
 body {
@@ -67,6 +59,28 @@ a {
 a:hover,
 a:focus {
     color: #FFF;
+}
+
+button {
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: 2px #FFF solid;
+    padding: 10px;
+    margin: 10px auto;
+    transition: 0.1s;
+}
+
+button:hover,
+button:focus {
+    background-color: #000;
+    color: #FFF;
+    border: 2px #FFF solid;
+    cursor: pointer;
 }
 
 ul {
@@ -213,6 +227,23 @@ fieldset {
     border: none;
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset p {
+    margin: 10px 0;
+}
+
+fieldset ul {
+    display: inline-block;
+    width: fit-content;
+    list-style: circle;
+}
+
+fieldset li {
+    text-align: left;
 }
 
 input {
@@ -224,27 +255,6 @@ textarea {
     margin: 0 auto;
     width: 100%;
     min-height: 200px;
-}
-
-button {
-    background-color: #FFF;
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.5rem;
-    border: none;
-    padding: 10px;
-    margin: 10px auto;
-    transition: 0.1s;
-}
-
-button:hover,
-button:focus {
-    background-color: #FFF;
-    color: #000;
-    cursor: pointer;
 }
 
 #name {
@@ -290,7 +300,9 @@ button:focus {
 }
 
 .nameEmail {
-    margin-bottom: 10px;
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
     flex-wrap: nowrap;
 }
 
