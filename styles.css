@@ -190,6 +190,47 @@ h1 {
     margin-right: 10px;
 }
 
+.testimonialsSliderMain {
+    display: flex;
+    margin: 0 auto;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.testimonialsSliderWindow {
+    width: 300px;
+    position: relative;
+}
+
+@keyframes quoteEntry {
+    0% {
+        opacity: 0%;
+        position: absolute;
+        right: 100%;
+    }
+    90% {
+        right: 0;
+    }
+    100% {
+        opacity: 100%;
+        position: static;
+    }
+}
+
+.testimonialP,
+.testimonialH {
+    animation: quoteEntry 1s linear;
+}
+
+.testimonialsSliderMain button {
+    width: 50px;
+    height: 100px;
+    text-align: center;
+    line-height: 80px;
+}
+
 /* About styles */
 
 .about {

@@ -4,41 +4,56 @@ const trevorCooke = {};
 // Select DOM elements for functions
 trevorCooke.quoteButtonL = document.querySelector('.quoteButtonL');
 trevorCooke.quoteButtonR = document.querySelector('.quoteButtonR');
+trevorCooke.currentQuoteP = document.querySelector('.testimonialP');
+trevorCooke.currentAuthorH = document.querySelector('.testimonialH');
 trevorCooke.footerP = document.querySelector('.footerP');
 
-// Set up DOM elements for each of the 3 testimonials. So basically...
-// trevorCooke.quote1 = "Simply the best";
-// trevorCooke.qAuthor1 = "Tina Turner";
-// Repeat for other quotes, and later in the button functions I can choose the quote text. We would need these lines too:
-// trevorCooke.currentQuote = trevorCooke.quote1;
-// trevorCooke.currentAuthor = trevorCooke.qAuthor1;
+// Quote & Author arrays
+trevorCooke.quotes = [
+    "Simply the best.",
+    "Girls just wanna have fun... with Trevor in the studio!",
+    "Pretty, pretty good!"
+];
+trevorCooke.authors = [
+    "Tina Turner",
+    "Cindy Lauper",
+    "Larry David"
+];
 
 // Declare quote shuffle count variable
-trevorCooke.quoteNumber = 1;
+trevorCooke.quoteNumber = 0;
 
-// Eventually will need to refactor this quote shuffle duplication (L & R would become one function)
-// Quote shuffle R function
-trevorCooke.quoteShuffleR = () => {
-    trevorCooke.quoteButtonR.addEventListener('click', () => {
-        trevorCooke.quoteNumber = trevorCooke.quoteNumber + 1;
-        if (trevorCooke.quoteNumber > 3) {
-            trevorCooke.quoteNumber = 1;
-        };
-        console.log(trevorCooke.quoteNumber);
-        // Here we can change the text of the quote block and author block in this fashion with a few if elses
-        // trevorCooke.currentQuote = trevorCooke.quote[trevorCooke.quoteNumber];
-        // trevorCooke.currentAuthor = trevorCooke.qAuthor[trevorCooke.quoteNumber];
-    })
-}
+// Function to cycle quotes
+trevorCooke.quoteCycle = () => {
+    if (trevorCooke.quoteNumber > 2) {
+        trevorCooke.quoteNumber = 0;
+    } else if (trevorCooke.quoteNumber < 0) {
+        trevorCooke.quoteNumber = 2;
+    }
+    if (trevorCooke.quoteNumber === 0) {
+        trevorCooke.currentQuoteP.innerHTML = trevorCooke.quotes[0];
+        trevorCooke.currentAuthorH.innerHTML = trevorCooke.authors[0];
+    } else if (trevorCooke.quoteNumber === 1) {
+        trevorCooke.currentQuoteP.innerHTML = trevorCooke.quotes[1];
+        trevorCooke.currentAuthorH.innerHTML = trevorCooke.authors[1];
+    } else {
+        trevorCooke.currentQuoteP.innerHTML = trevorCooke.quotes[2];
+        trevorCooke.currentAuthorH.innerHTML = trevorCooke.authors[2];
+    }
+    // I need to have the animation run every time the button is pressed and this function is run, will need to look it up again. Right now it does come in on initial entry
+    // trevorCooke.currentQuoteP.classList = "testimonialP";
+    // trevorCooke.currentAuthorH.classList = "testimonialH";
+};
 
-// Quote shuffle L function
-trevorCooke.quoteShuffleL = () => {
+// Quote shuffle take 2
+trevorCooke.quoteShuffle = () => {
     trevorCooke.quoteButtonL.addEventListener('click', () => {
         trevorCooke.quoteNumber = trevorCooke.quoteNumber - 1;
-        if (trevorCooke.quoteNumber < 1) {
-            trevorCooke.quoteNumber = 3;
-        };
-        console.log(trevorCooke.quoteNumber);
+        trevorCooke.quoteCycle();
+    })
+    trevorCooke.quoteButtonR.addEventListener('click', () => {
+        trevorCooke.quoteNumber = trevorCooke.quoteNumber + 1;
+        trevorCooke.quoteCycle();
     })
 }
 
@@ -61,8 +76,8 @@ trevorCooke.formspreeClear = () => {
 trevorCooke.init = () => {
 
     // Call all functions
-    trevorCooke.quoteShuffleL();
-    trevorCooke.quoteShuffleR();
+    trevorCooke.quoteCycle();
+    trevorCooke.quoteShuffle();
     trevorCooke.footerYear();
     trevorCooke.formspreeClear();
 }
