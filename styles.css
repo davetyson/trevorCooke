@@ -438,7 +438,8 @@ Needed media queries
         font-size: 75%;
     }
     iframe {
-        max-width: 400px;
+        width: 320px;
+        height: 180px;
     }
     header img {
         width: 400px;
@@ -490,7 +491,7 @@ Needed media queries
     }
     #name,
     #email {
-        padding: 0;
+        padding: 5px;
         margin: 5px auto;
     }
     .nameEmail {
