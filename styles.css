@@ -7,7 +7,6 @@ html { box-sizing: border-box;}
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /* Global styles */
-
 body {
     background-color: #000;
     color: #FFF;
@@ -54,8 +53,6 @@ img {
 
 a {
     color: #FFF;
-    /* text-decoration: none; */
-    /* transition: 0.1s; */
 }
 
 a:hover,
@@ -104,6 +101,10 @@ figcaption {
     font-size: 1.25rem;
 }
 
+iframe {
+    max-width: auto;
+}
+
 .flex {
     display: flex;
 }
@@ -128,6 +129,7 @@ header {
 
 header img {
     border-radius: 50%;
+    width: 600px;
 }
 
 h1 {
@@ -139,7 +141,6 @@ h1 {
 }
 
 /* Selected Works styles */
-
 .selectedWorks {
     margin-bottom: 40px;
 }
@@ -182,9 +183,8 @@ h1 {
 }
 
 /* Testimonials styles */
-
 .testimonials h3 {
-    margin-top: 40px;
+    margin-top: 100px;
 }
 
 .testimonials img {
@@ -203,19 +203,18 @@ h1 {
 
 .testimonialsSliderMain {
     display: flex;
-    margin: 20px auto;
+    margin: 0 auto 20px auto;
     height: 225px;
     max-width: 750px;
     justify-content: center;
     align-items: center;
-    border: 3px solid #FFF;
-    border-radius: 20%;
-    padding: 0 20px;
+    padding: 0 20px; 
 }
 
 .testimonialsSliderWindow {
     width: 500px;
-    margin: 0 20px;
+    margin: 0 10px;
+    padding: 0 10px;
 }
 
 @keyframes quoteEntry {
@@ -254,24 +253,29 @@ h1 {
 
 .testimonialsSliderMain button {
     width: 50px;
-    height: 100px;
+    height: 120px;
     text-align: center;
-    line-height: 80px;
+    line-height: 100px;
+}
+
+.quoteButtonL,
+.quoteButtonR {
     margin: 0;
 }
 
 /* About styles */
-
 .about {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 100px auto 40px auto;
+    margin: 80px auto 40px auto;
 }
 
 .aboutText {
     width: calc(45% - 40px);
     margin-right: 40px;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: column;
 }
@@ -385,8 +389,6 @@ textarea {
 
 /* Footer styles */
 footer {
-    /* background-color: #000;
-    color: #FFF; */
     padding: 20px;
     text-align: center;
 }
@@ -399,6 +401,107 @@ footer {
 .builtBy a {
     font-size: 1rem;
 }
+
+/* 
+Needed media queries
+- all fonts smaller
+- header image smaller
+- max size for youtube embed (width too wide right now)
+- testimonials button switch DONE
+- about section: change flex-wrap to vertical (first text then photo)
+- contact: put name and email on top of each other to provide more space for each line
+*/
+
+@media (max-width: 1020px) {
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        font-size: 100%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h2 {
+        width: 100%;
+    }
+    h3 {
+        font-size: 150%;
+    }
+    a {
+        font-size: 75%;
+    }
+    iframe {
+        max-width: 400px;
+    }
+    header img {
+        width: 400px;
+    }
+    .testimonials h3 {
+        margin-top: 60px;
+    }
+    .testimonialP,
+    .testimonialH {
+        font-size: 125%;
+    }
+    .testimonialsSliderMain {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .testimonialsSliderMain button {
+        width: 120px;
+        height: 50px;
+        line-height: 100%;
+    }
+    .testimonialsSliderWindow {
+        order: 1;
+    }
+    .quoteButtonL {
+        order: 2;
+        margin: -20px 40px 0 0;
+    }
+    .quoteButtonR {
+        order: 3;
+        margin: -20px 0 0 0;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .aboutText {
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .aboutImg {
+        width: 90%;
+    }
+    fieldset {
+        width: 100%;
+    }
+    input {
+        width: 100%;
+    }
+    #name,
+    #email {
+        padding: 0;
+        margin: 5px auto;
+    }
+    .nameEmail {
+        flex-wrap: wrap;
+    }
+    footer p,
+    footer a {
+        font-size: 112.5%
+    }
+}
+
 
 /* Media Queries */
 /* @media (max-width: 768px) {
@@ -413,24 +516,10 @@ footer {
         width: 100%;
     }
     h3 {
-        padding: 0;
         font-size: 125%;
     }
     header figure {
         width: 90%;
-    }
-    .menu {
-        flex-direction: column;
-        text-align: center;
-    }
-    .menuOpen {
-        display: inline-block;
-    }
-    .showMenu {
-        display: inline-block;
-    }
-    .hideMenu {
-        display: none;
     }
     #introduction h3 {
         padding-right: 0;
