@@ -25,27 +25,31 @@ trevorCooke.quoteNumber = 0;
 
 // Function to cycle quotes
 trevorCooke.quoteCycle = () => {
-    if (trevorCooke.quoteNumber > 2) {
-        trevorCooke.quoteNumber = 0;
-    } else if (trevorCooke.quoteNumber < 0) {
-        trevorCooke.quoteNumber = 2;
-    }
-    if (trevorCooke.quoteNumber === 0) {
-        trevorCooke.currentQuoteP.innerHTML = trevorCooke.quotes[0];
-        trevorCooke.currentAuthorH.innerHTML = trevorCooke.authors[0];
-    } else if (trevorCooke.quoteNumber === 1) {
-        trevorCooke.currentQuoteP.innerHTML = trevorCooke.quotes[1];
-        trevorCooke.currentAuthorH.innerHTML = trevorCooke.authors[1];
-    } else {
-        trevorCooke.currentQuoteP.innerHTML = trevorCooke.quotes[2];
-        trevorCooke.currentAuthorH.innerHTML = trevorCooke.authors[2];
-    }
-    // I need to have the animation run every time the button is pressed and this function is run, will need to look it up again. Right now it does come in on initial entry
-    // trevorCooke.currentQuoteP.classList = "testimonialP";
-    // trevorCooke.currentAuthorH.classList = "testimonialH";
+    trevorCooke.currentQuoteP.classList = "testimonialP quoteExit";
+    trevorCooke.currentAuthorH.classList = "testimonialH quoteExit";
+    setTimeout(() => {
+        if (trevorCooke.quoteNumber > 2) {
+            trevorCooke.quoteNumber = 0;
+        } else if (trevorCooke.quoteNumber < 0) {
+            trevorCooke.quoteNumber = 2;
+        }
+        if (trevorCooke.quoteNumber === 0) {
+            trevorCooke.currentQuoteP.innerHTML = trevorCooke.quotes[0];
+            trevorCooke.currentAuthorH.innerHTML = trevorCooke.authors[0];
+        } else if (trevorCooke.quoteNumber === 1) {
+            trevorCooke.currentQuoteP.innerHTML = trevorCooke.quotes[1];
+            trevorCooke.currentAuthorH.innerHTML = trevorCooke.authors[1];
+        } else {
+            trevorCooke.currentQuoteP.innerHTML = trevorCooke.quotes[2];
+            trevorCooke.currentAuthorH.innerHTML = trevorCooke.authors[2];
+        }
+        // I need to have the animation run every time the button is pressed and this function is run, will need to look it up again. Right now it does come in on initial entry
+        trevorCooke.currentQuoteP.classList = "testimonialP quoteEntry";
+        trevorCooke.currentAuthorH.classList = "testimonialH quoteEntry";
+    }, 200);
 };
 
-// Quote shuffle take 2
+// Quote shuffle
 trevorCooke.quoteShuffle = () => {
     trevorCooke.quoteButtonL.addEventListener('click', () => {
         trevorCooke.quoteNumber = trevorCooke.quoteNumber - 1;
